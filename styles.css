@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Fondo psicodélico multicolor */
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0000, #00ff00);
+    background-size: 400% 400%;
+    animation: psychedelicBackground 10s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.title {
+    font-family: 'Eurostile', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px #000, -2px -2px 5px #ff00ff;
+}
+
+
+.title span {
+    display: inline-block;
+    position: relative;
+    animation: 
+        psychedelicFall 4s infinite ease-in-out,
+        glow 1.5s infinite alternate;
+}
+
+
+.title span:nth-child(1) { animation-delay: 0s; }
+.title span:nth-child(2) { animation-delay: 0.1s; }
+.title span:nth-child(3) { animation-delay: 0.2s; }
+.title span:nth-child(4) { animation-delay: 0.3s; }
+.title span:nth-child(5) { animation-delay: 0.4s; }
+.title span:nth-child(6) { animation-delay: 0.5s; }
+.title span:nth-child(7) { animation-delay: 0.6s; }
+.title span:nth-child(8) { animation-delay: 0.7s; }
+.title span:nth-child(9) { animation-delay: 0.8s; }
+.title span:nth-child(10) { animation-delay: 0.9s; }
+.title span:nth-child(11) { animation-delay: 1s; }
+.title span:nth-child(12) { animation-delay: 1.1s; }
+.title span:nth-child(13) { animation-delay: 1.2s; }
+.title span:nth-child(14) { animation-delay: 1.3s; }
+.title span:nth-child(15) { animation-delay: 1.4s; }
+.title span:nth-child(16) { animation-delay: 1.5s; }
+.title span:nth-child(17) { animation-delay: 1.6s; }
+.title span:nth-child(18) { animation-delay: 1.7s; }
+.title span:nth-child(19) { animation-delay: 1.8s; }
+.title span:nth-child(20) { animation-delay: 1.9s; }
+.title span:nth-child(21) { animation-delay: 2s; }
+.title span:nth-child(22) { animation-delay: 2.1s; }
+.title span:nth-child(23) { animation-delay: 2.2s; }
+.title span:nth-child(24) { animation-delay: 2.3s; }
+.title span:nth-child(25) { animation-delay: 2.4s; }
+.title span:nth-child(26) { animation-delay: 2.5s; }
+.title span:nth-child(27) { animation-delay: 2.6s; }
+.title span:nth-child(28) { animation-delay: 2.7s; }
+.title span:nth-child(29) { animation-delay: 2.8s; }
+.title span:nth-child(30) { animation-delay: 2.9s; }
+.title span:nth-child(31) { animation-delay: 3s; }
+.title span:nth-child(32) { animation-delay: 3.1s; }
+.title span:nth-child(33) { animation-delay: 3.2s; }
+.title span:nth-child(34) { animation-delay: 3.3s; }
+.title span:nth-child(35) { animation-delay: 3.4s; }
+.title span:nth-child(36) { animation-delay: 3.5s; }
+.title span:nth-child(37) { animation-delay: 3.6s; }
+.title span:nth-child(38) { animation-delay: 3.7s; }
+.title span:nth-child(39) { animation-delay: 3.8s; }
+
+
+.square {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background: blue;
+    animation: 
+        moveZigZag 4s infinite linear,
+        colorChange 2s infinite,
+        scaleSize 1.5s infinite;
+}
+
+
+.hypnotoad {
+    position: absolute;
+    bottom: 20px;
+    animation: hypnotoadPulse 3s infinite;
+}
+
+.hypnotoad img {
+    width: 150px;
+    height: auto;
+}
+
+
+@keyframes psychedelicBackground {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+
+@keyframes psychedelicFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(50vh) rotate(720deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(80vh) rotate(1440deg);
+        opacity: 0;
+    }
+}
+
+
+@keyframes glow {
+    0% { color: #fff; text-shadow: 2px 2px 5px #000, -2px -2px 5px #ff00ff; }
+    50% { color: #00ffff; text-shadow: 2px 2px 5px #000, -2px -2px 8px #ffff00; }
+    100% { color: #ff00ff; text-shadow: 2px 2px 8px #000, -2px -2px 5px #00ff00; }
+}
+
+
+@keyframes hypnotoadPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes moveZigZag {
+    0% { left: -200px; top: 0; }
+    25% { left: 0px; top: 100px; }
+    50% { left: 200px; top: 0; }
+    75% { left: 0px; top: -100px; }
+    100% { left: -200px; top: 0; }
+}
+
+@keyframes colorChange {
+    0% { background: blue; }
+    33% { background: red; }
+    66% { background: green; }
+    100% { background: blue; }
+}
+
+@keyframes scaleSize {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
